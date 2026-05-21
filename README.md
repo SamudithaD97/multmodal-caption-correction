@@ -222,10 +222,12 @@ Autoregressive caption generation loss.
 L_{caption} =
 -\frac{1}{T}
 \sum_{t=1}^{T}
-\log P(w_t | w_{<t}, v_{img}, v^{masked}_{text})
+\log P\left(
+w_t \mid w_{<t},
+v_{img},
+v_{text}^{masked}
+\right)
 ```
-
----
 
 ## 3. Total Loss
 
@@ -574,44 +576,4 @@ tail -f ./logs/job_{job_id}.out
 
 ---
 
-# References
 
-```bibtex
-@article{radford2021clip,
-  title={Learning Transferable Visual Models From Natural Language Supervision},
-  author={Radford et al.},
-  year={2021}
-}
-
-@article{vinyals2015show,
-  title={Show and Tell: A Neural Image Caption Generator},
-  author={Vinyals et al.},
-  year={2015}
-}
-
-@article{lu2019vilbert,
-  title={ViLBERT: Pretraining Task-Agnostic Visiolinguistic Representations},
-  author={Lu et al.},
-  year={2019}
-}
-
-@article{li2022blip,
-  title={BLIP: Bootstrapping Language-Image Pre-training},
-  author={Li et al.},
-  year={2022}
-}
-```
-
----
-
-# Authors
-
-- Kushal Pokharel
-- Hamza Almani
-- Samuditha Wijayasundara
-
----
-
-# License
-
-MIT License
