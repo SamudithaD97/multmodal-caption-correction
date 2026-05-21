@@ -1,0 +1,7 @@
+data/
+coco-data/
+__pycache__/
+.pytest_cache/
+*.pth
+*.pt
+runs/
